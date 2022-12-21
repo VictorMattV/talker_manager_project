@@ -1,0 +1,34 @@
+{
+  "name": "sd-0x-project-talker-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --runInBand",
+    "test:mocha": "nyc --all --include src mocha src/tests/integration/*.js --exit",
+    "restore": "cp __tests__/seed.json src/talker.json",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js --ignore 'src/talker.json'",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "crypto-js": "4.0.0",
+    "express": "4.17.1",
+    "express-rescue": "1.1.30"
+  },
+  "devDependencies": {
+    "chai": "4.3.4",
+    "eslint": "6.8.0",
+    "eslint-config-trybe-backend": "1.0.1",
+    "frisby": "2.1.3",
+    "jest": "26.6.1",
+    "mocha": "8.4.0",
+    "nodemon": "2.0.15",
+    "nyc": "15.1.0",
+    "sinon": "11.1.1"
+  }
+}
